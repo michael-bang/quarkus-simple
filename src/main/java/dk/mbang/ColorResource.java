@@ -16,7 +16,7 @@ public class ColorResource {
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/default")
     public String defaultColor() {
-        return service.defaultColor() + service.hostName();
+        return "Color: " + service.defaultColor() + " - Pod: " service.hostName();
     }
 
     @GET
